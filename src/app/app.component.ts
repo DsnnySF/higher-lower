@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Country} from "./country";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'higher-lower';
+  countries: Country[] = [];
+
+  constructor() {
+  }
+
+  ngOnInit(): void {
+
+  }
 }
