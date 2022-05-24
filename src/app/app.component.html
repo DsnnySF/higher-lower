@@ -3,6 +3,11 @@
 </head>
 <body>
   <div>
-
+    <button (click)="selectRandom()">Display Random Country</button>
+    <div *ngIf="this.country != undefined">
+      <div>{{country.name}}</div>
+      <div>{{country.population}}</div>
+      <img src="{{ country.imageLink }}" alt="" class="img"/>
+    </div>
   </div>
 </body>
