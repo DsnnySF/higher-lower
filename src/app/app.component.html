@@ -4,23 +4,27 @@
   <div *ngIf="!game_started">
     <button (click)="startGame()">Start Game</button>
   </div>
-  <div class="country">
-    <div class="prev">
-      <div *ngIf="this.prev_country != undefined">
-        <div>{{prev_country.name}}</div>
-        <div>{{prev_country.population}}</div>
-        <img src="{{ prev_country.imageLink }}" alt="" class="img"/>
+  <div *ngIf="game_started">
+    <div class="scores">
+      <div class="max_score">Max Score: {{this.max_score}}</div>
+      <div class="current_score">Current Score: {{this.score}}</div>
+    </div>
+    <div class="country">
+      <div class="prev">
+        <div *ngIf="this.prev_country != undefined">
+          <img src="{{ prev_country.imageLink }}" alt="" class="img"/>
+          <div>{{prev_country.name}} has a population of {{prev_country.population}}</div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="country">
-    <div class="current">
-      <div *ngIf="this.country != undefined">
-        <div>{{country.name}}</div>
-        <div>{{country.population}}</div>
-        <img src="{{ country.imageLink }}" alt="" class="img"/>
-        <button (click)="check(true)">Higher</button>
-        <button (click)="check(false)">Lower</button>
+    <div class="country">
+      <div class="current">
+        <div *ngIf="this.country != undefined">
+          <img src="{{ country.imageLink }}" alt="" class="img"/>
+          <div>Does {{country.name}} have a </div>
+          <button (click)="check(true)">Higher</button> or
+          <button (click)="check(false)">Lower</button> population
+        </div>
       </div>
     </div>
   </div>

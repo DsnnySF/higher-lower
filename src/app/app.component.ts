@@ -280,25 +280,39 @@ export class AppComponent {
   check(bool: boolean) {
     if (bool){
       // @ts-ignore
-      if (this.country > this.prev_country){
+      if (this.country?.population > this.prev_country?.population){
         this.moveCountry();
       }
       else {
         this.endGame();
       }
-
     }
     else {
-
+      // @ts-ignore
+      if (this.prev_country?.population > this.country?.population){
+        this.moveCountry()
+      }
+      else{
+        this.endGame();
+      }
     }
   }
 
   moveCountry(): void {
+    ++this.score
+    if (this.score > this.max_score){
+      this.max_score = this.score;
+    }
+    this.selectRandom();
 
   }
 
   endGame(): void {
-
+    if (this.score > this.max_score){
+      this.max_score = this.score;
+    }
+    this.game_started = false;
+    this.score = 0;
   }
 
   startGame(): void {
