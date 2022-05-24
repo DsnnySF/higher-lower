@@ -1,13 +1,27 @@
 <head>
-
 </head>
 <body>
-  <div>
-    <button (click)="selectRandom()">Display Random Country</button>
-    <div *ngIf="this.country != undefined">
-      <div>{{country.name}}</div>
-      <div>{{country.population}}</div>
-      <img src="{{ country.imageLink }}" alt="" class="img"/>
+  <div *ngIf="!game_started">
+    <button (click)="startGame()">Start Game</button>
+  </div>
+  <div class="country">
+    <div class="prev">
+      <div *ngIf="this.prev_country != undefined">
+        <div>{{prev_country.name}}</div>
+        <div>{{prev_country.population}}</div>
+        <img src="{{ prev_country.imageLink }}" alt="" class="img"/>
+      </div>
+    </div>
+  </div>
+  <div class="country">
+    <div class="current">
+      <div *ngIf="this.country != undefined">
+        <div>{{country.name}}</div>
+        <div>{{country.population}}</div>
+        <img src="{{ country.imageLink }}" alt="" class="img"/>
+        <button (click)="check(true)">Higher</button>
+        <button (click)="check(false)">Lower</button>
+      </div>
     </div>
   </div>
 </body>

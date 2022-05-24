@@ -1,4 +1,18 @@
+body {
+  color: white;
+}
+
 .img {
   width: 225px;
   height: 150px;
+}
+
+.prev {
+  position: absolute;
+  left: 10%;
+}
+
+.current {
+  position: absolute;
+  right: 10%;
 }

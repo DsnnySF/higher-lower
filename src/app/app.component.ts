@@ -250,8 +250,15 @@ export class AppComponent {
     {"name": "Vatican City", "population": 801, "imageLink": "assets/images/vaticancity.png"}
   ];
   country: Country| undefined;
+  prev_country: Country| undefined;
+  game_started: boolean;
+  score: number;
+  max_score: number;
 
   constructor() {
+    this.game_started = false;
+    this.score = 0;
+    this.max_score = 0;
   }
 
   ngOnInit(): void {
@@ -259,6 +266,7 @@ export class AppComponent {
 
   selectRandom(): void {
     let num: number = this.getRandomInt(0, 234)
+    this.prev_country = this.country;
     this.country = this.countries[num];
   }
 
@@ -266,5 +274,36 @@ export class AppComponent {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min);
+  }
+
+  //True means current is higher that previous
+  check(bool: boolean) {
+    if (bool){
+      // @ts-ignore
+      if (this.country > this.prev_country){
+        this.moveCountry();
+      }
+      else {
+        this.endGame();
+      }
+
+    }
+    else {
+
+    }
+  }
+
+  moveCountry(): void {
+
+  }
+
+  endGame(): void {
+
+  }
+
+  startGame(): void {
+    this.game_started = true;
+    this.selectRandom();
+    this.selectRandom();
   }
 }
