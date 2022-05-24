@@ -2,24 +2,31 @@
 </head>
 <body>
   <div *ngIf="!game_started">
-    <button (click)="startGame()">Start Game</button>
+    <button (click)="startGame()">Start Game</button>   Max Score: {{max_score}}
+  </div>
+  <div *ngIf="display_correct">
+    <div class="correct">Correct</div>
+  </div>
+  <div *ngIf="display_incorrect">
+    <div class="correct">Wrong</div>
   </div>
   <div *ngIf="game_started">
     <div class="scores">
-      <div class="max_score">Max Score: {{this.max_score}}</div>
-      <div class="current_score">Current Score: {{this.score}}</div>
+      <div class="max_score">Max Score: {{max_score}}</div>
+      <div class="current_score">Current Score: {{score}}</div>
     </div>
     <div class="country">
       <div class="prev">
-        <div *ngIf="this.prev_country != undefined">
+        <div *ngIf="prev_country != undefined">
           <img src="{{ prev_country.imageLink }}" alt="" class="img"/>
-          <div>{{prev_country.name}} has a population of {{prev_country.population}}</div>
+          <div>{{prev_country.name}} has a population of</div>
+          <div class="population">{{prev_country.pop}}</div>
         </div>
       </div>
     </div>
     <div class="country">
       <div class="current">
-        <div *ngIf="this.country != undefined">
+        <div *ngIf="country != undefined">
           <img src="{{ country.imageLink }}" alt="" class="img"/>
           <div>Does {{country.name}} have a </div>
           <button (click)="check(true)">Higher</button> or
