@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import {Country} from "./country";
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -252,15 +251,11 @@ export class AppComponent {
   game_started: boolean;
   score: number;
   max_score: number;
-  display_correct: boolean;
-  display_incorrect: boolean;
 
   constructor() {
     this.game_started = false;
     this.score = 0;
     this.max_score = 0;
-    this.display_correct = false;
-    this.display_incorrect = false;
   }
 
   ngOnInit(): void {

@@ -2,6 +2,91 @@ body {
   color: white;
 }
 
+.fadein img {
+  position:absolute;
+  top: -48px;
+  left: 0;
+  width: 1536px;
+  height: 760px;
+  object-fit: fill;
+  -webkit-animation-name: fade;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 50s;
+  animation-name: fade;
+  animation-iteration-count: infinite;
+  animation-duration: 50s;
+}
+
+@-webkit-keyframes fade {
+  0% {opacity: 0;}
+  20% {opacity: 1;}
+  33% {opacity: 1;}
+  53% {opacity: 0;}
+  100% {opacity: 0;}
+}
+@keyframes fade {
+  0% {opacity: 0;}
+  20% {opacity: 1;}
+  33% {opacity: 1;}
+  53% {opacity: 0;}
+  100% {opacity: 0;}
+}
+
+#f1 {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+#f2 {
+  -webkit-animation-delay: -5s;
+  animation-delay: -5s;
+}
+#f3 {
+  -webkit-animation-delay: -10s;
+  animation-delay: -10s;
+}
+#f4 {
+  -webkit-animation-delay: -15s;
+  animation-delay: -15s;
+}
+#f5 {
+  -webkit-animation-delay: -20s;
+  animation-delay: -20s;
+}
+#f6 {
+  -webkit-animation-delay: -25s;
+  animation-delay: -25s;
+}
+#f7 {
+  -webkit-animation-delay: -30s;
+  animation-delay: -30s;
+}
+#f8 {
+  -webkit-animation-delay: -35s;
+  animation-delay: -35s;
+}
+#f9 {
+  -webkit-animation-delay: -40s;
+  animation-delay: -40s;
+}
+#f10 {
+  -webkit-animation-delay: -45s;
+  animation-delay: -45s;
+}
+
+.back {
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 .img {
   width: 450px;
   height: 300px;

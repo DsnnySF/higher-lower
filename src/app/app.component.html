@@ -1,14 +1,18 @@
-<head>
-</head>
 <body>
   <div *ngIf="!game_started">
     <button (click)="startGame()">Start Game</button>   Max Score: {{max_score}}
-  </div>
-  <div *ngIf="display_correct">
-    <div class="correct">Correct</div>
-  </div>
-  <div *ngIf="display_incorrect">
-    <div class="correct">Wrong</div>
+    <div class="fadein">
+      <img id="f1" src="assets/images/b_pakistan.jpg" alt=""/>
+      <img id="f2" src="assets/images/b_srilanka.jpg" alt=""/>
+      <img id="f3" src="assets/images/b_zimbabwe.jpg" alt=""/>
+      <img id="f4" src="assets/images/b_jordan.jpg" alt=""/>
+      <img id="f5" src="assets/images/b_bahrain.jpg" alt=""/>
+      <img id="f6" src="assets/images/b_puertorico.jpg" alt=""/>
+      <img id="f7" src="assets/images/b_eritrea.jpg" alt=""/>
+      <img id="f8" src="assets/images/b_usa.jpg" alt=""/>
+      <img id="f9" src="assets/images/b_bangladesh.jpg" alt=""/>
+      <img id="f10" src="assets/images/b_brazil.jpg" alt=""/>
+    </div>
   </div>
   <div *ngIf="game_started">
     <div class="scores">
