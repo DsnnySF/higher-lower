@@ -1,6 +1,8 @@
 <body>
   <div *ngIf="!game_started">
-    <button (click)="startGame()">Start Game</button>   Max Score: {{max_score}}
+    <div id="homeinfo">
+      <button class="btn" (click)="startGame()">Start Game</button><p id="score">   Max Score: {{max_score}}</p>
+    </div>
     <div class="fadein">
       <img id="f1" src="assets/images/b_pakistan.jpg" alt=""/>
       <img id="f2" src="assets/images/b_srilanka.jpg" alt=""/>
