@@ -1,7 +1,17 @@
 <body>
   <div *ngIf="!game_started">
-    <div id="homeinfo">
-      <button class="btn" (click)="startGame()">Start Game</button><p id="score">   Max Score: {{max_score}}</p>
+    <div *ngIf="end_screen">
+      <div id="endinfo">
+        <button class="btn" (click)="startGame()">Try Again</button>
+        <br>
+        <button class="btn" (click)="goToHome()">Home</button>
+      </div>
+    </div>
+    <div *ngIf="!end_screen">
+      <p id="title">The Higher or Lower Game</p>
+      <div id="homeinfo">
+        <button class="btn" (click)="startGame()">Start Game</button><p id="score">   Max Score: {{max_score}}</p>
+      </div>
     </div>
     <div class="fadein">
       <img id="f1" src="assets/images/b_pakistan.jpg" alt=""/>

@@ -251,11 +251,13 @@ export class AppComponent {
   game_started: boolean;
   score: number;
   max_score: number;
+  end_screen: boolean;
 
   constructor() {
     this.game_started = false;
     this.score = 0;
     this.max_score = 0;
+    this.end_screen = false;
   }
 
   ngOnInit(): void {
@@ -309,12 +311,18 @@ export class AppComponent {
       this.max_score = this.score;
     }
     this.game_started = false;
+    this.end_screen = true;
     this.score = 0;
   }
 
   startGame(): void {
+    this.end_screen = false;
     this.game_started = true;
     this.selectRandom();
     this.selectRandom();
+  }
+
+  goToHome(): void {
+    this.end_screen = false;
   }
 }

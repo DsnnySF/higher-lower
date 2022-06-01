@@ -99,6 +99,20 @@ body {
   text-shadow: 1px 1px 2px #427388;
 }
 
+#title {
+  z-index: 1000;
+  position: absolute;
+  right: 7.5%;
+  top: 72%;
+}
+
+#endinfo {
+  z-index: 1000;
+  position: absolute;
+  right: 10%;
+  top: 80%;
+}
+
 #homeinfo {
   z-index: 1000;
   position: absolute;
