@@ -3,4 +3,5 @@ export interface Country {
   population: number;
   imageLink: string;
   pop: string;
+  ratio: number;
 }

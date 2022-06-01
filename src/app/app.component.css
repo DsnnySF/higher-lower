@@ -120,10 +120,61 @@ body {
   top: 80%;
 }
 
-.img {
+.i23 {
   width: 450px;
   height: 300px;
 }
+
+.i11 {
+  width: 300px;
+  height: 300px;
+}
+
+.i12 {
+  width: 600px;
+  height: 300px;
+}
+
+.i34 {
+  width: 400px;
+  height: 300px;
+}
+
+.i57 {
+  width: 420px;
+  height: 300px;
+}
+
+.i67 {
+  width: 350px;
+  height: 300px;
+}
+
+.i58 {
+  width: 480px;
+  height: 300px;
+}
+
+.i35 {
+  width: 500px;
+  height: 300px;
+}
+
+.i1018 {
+  width: 540px;
+  height: 300px;
+}
+
+.i1019 {
+  width: 570px;
+  height: 300px;
+}
+
+.i1128 {
+  width: 700px;
+  height: 275px;
+}
+
 .country {
   text-align: center;
 }

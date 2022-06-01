@@ -34,7 +34,39 @@
     <div class="country">
       <div class="prev">
         <div *ngIf="prev_country != undefined">
-          <img src="{{ prev_country.imageLink }}" alt="" class="img"/>
+          <div *ngIf="prev_country!.ratio == 12">
+            <img src="{{ prev_country.imageLink }}" alt="" class="i12"/>
+          </div>
+          <div *ngIf="prev_country!.ratio == 23">
+            <img src="{{ prev_country.imageLink }}" alt="" class="i23"/>
+          </div>
+          <div *ngIf="prev_country!.ratio == 11">
+            <img src="{{ prev_country.imageLink }}" alt="" class="i11"/>
+          </div>
+          <div *ngIf="prev_country!.ratio == 34">
+            <img src="{{ prev_country.imageLink }}" alt="" class="i34"/>
+          </div>
+          <div *ngIf="prev_country!.ratio == 57">
+            <img src="{{ prev_country.imageLink }}" alt="" class="i57"/>
+          </div>
+          <div *ngIf="prev_country!.ratio == 58">
+            <img src="{{ prev_country.imageLink }}" alt="" class="i58"/>
+          </div>
+          <div *ngIf="prev_country!.ratio == 67">
+            <img src="{{ prev_country.imageLink }}" alt="" class="i67"/>
+          </div>
+          <div *ngIf="prev_country!.ratio == 35">
+            <img src="{{ prev_country.imageLink }}" alt="" class="i35"/>
+          </div>
+          <div *ngIf="prev_country!.ratio == 1018">
+            <img src="{{ prev_country.imageLink }}" alt="" class="i1018"/>
+          </div>
+          <div *ngIf="prev_country!.ratio == 1019">
+            <img src="{{ prev_country.imageLink }}" alt="" class="i1019"/>
+          </div>
+          <div *ngIf="prev_country!.ratio == 1128">
+            <img src="{{ prev_country.imageLink }}" alt="" class="i1128"/>
+          </div>
           <div>{{prev_country.name}} has a population of</div>
           <div class="population">{{prev_country.pop}}</div>
         </div>
@@ -43,7 +75,39 @@
     <div class="country">
       <div class="current">
         <div *ngIf="country != undefined">
-          <img src="{{ country.imageLink }}" alt="" class="img"/>
+          <div *ngIf="country!.ratio == 12">
+            <img src="{{ country.imageLink }}" alt="" class="i12"/>
+          </div>
+          <div *ngIf="country!.ratio == 23">
+            <img src="{{ country.imageLink }}" alt="" class="i23"/>
+          </div>
+          <div *ngIf="country!.ratio == 11">
+            <img src="{{ country.imageLink }}" alt="" class="i11"/>
+          </div>
+          <div *ngIf="country!.ratio == 34">
+            <img src="{{ country.imageLink }}" alt="" class="i34"/>
+          </div>
+          <div *ngIf="country!.ratio == 57">
+            <img src="{{ country.imageLink }}" alt="" class="i57"/>
+          </div>
+          <div *ngIf="country!.ratio == 58">
+            <img src="{{ country.imageLink }}" alt="" class="i58"/>
+          </div>
+          <div *ngIf="country!.ratio == 67">
+            <img src="{{ country.imageLink }}" alt="" class="i67"/>
+          </div>
+          <div *ngIf="country!.ratio == 35">
+            <img src="{{ country.imageLink }}" alt="" class="i35"/>
+          </div>
+          <div *ngIf="country!.ratio == 1018">
+            <img src="{{ country.imageLink }}" alt="" class="i1018"/>
+          </div>
+          <div *ngIf="country!.ratio == 1019">
+            <img src="{{ country.imageLink }}" alt="" class="i1019"/>
+          </div>
+          <div *ngIf="country!.ratio == 1128">
+            <img src="{{ country.imageLink }}" alt="" class="i1128"/>
+          </div>
           <div>Does {{country.name}} have a </div>
           <button (click)="check(true)">Higher</button> or
           <button (click)="check(false)">Lower</button> population
