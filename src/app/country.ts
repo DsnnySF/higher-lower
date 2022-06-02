@@ -4,4 +4,5 @@ export interface Country {
   imageLink: string;
   pop: string;
   ratio: number;
+  recognizedByUN: boolean;
 }

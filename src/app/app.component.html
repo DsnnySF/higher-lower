@@ -10,7 +10,16 @@
     <div *ngIf="!end_screen">
       <p id="title">The Higher or Lower Game</p>
       <div id="homeinfo">
-        <button class="btn" (click)="startGame()">Start Game</button><p id="score">   Max Score: {{max_score}}</p>
+        <button class="btn" (click)="startGame()">Start Game</button>
+        <br>
+      </div>
+      <div id="gamemodes">
+        <mat-form-field appearance="fill">
+          <mat-select [(value)]="gamemode" placeholder="Select a Gamemode">
+            <mat-option [value]="1">All Countries Pop.</mat-option>
+            <mat-option [value]="2">UN Countries Pop.</mat-option>
+          </mat-select>
+        </mat-form-field>
       </div>
     </div>
     <div class="fadein">
@@ -28,7 +37,7 @@
   </div>
   <div *ngIf="game_started">
     <div class="scores">
-      <div class="max_score">Max Score: {{max_score}}</div>
+      <div class="max_score">High Score: {{max_score}}</div>
       <div class="current_score">Current Score: {{score}}</div>
     </div>
     <div class="country">
