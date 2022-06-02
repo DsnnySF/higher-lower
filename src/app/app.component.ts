@@ -161,6 +161,7 @@ export class AppComponent {
     {"name": "Slovenia", "population": 2078938, "imageLink": "assets/images/slovenia.png", "pop": "2,078,938", "ratio": 12},
     {"name": "Guinea-Bissau", "population": 1968001, "imageLink": "assets/images/guineabissau.svg", "pop": "1,968,001", "ratio": 12},
     {"name": "Latvia", "population": 1886198, "imageLink": "assets/images/latvia.png", "pop": "1,886,198", "ratio": 12},
+    {"name": "Kosovo", "population": 1769386, "imageLink": "assets/images/kosovo.webp", "pop": "1,769,386", "ratio": 57},
     {"name": "Bahrain", "population": 1701575, "imageLink": "assets/images/bahrain.svg", "pop": "1,701,575", "ratio": 23},
     {"name": "Equatorial Guinea", "population": 1402985, "imageLink": "assets/images/equatorialguinea.png", "pop": "1,402,985", "ratio": 23},
     {"name": "Trinidad and Tobago", "population": 1399488, "imageLink": "assets/images/trinidadandtobago.jpg", "pop": "1,399,488", "ratio": 35},
