@@ -5,4 +5,5 @@ export interface Country {
   pop: string;
   ratio: number;
   recognizedByUN: boolean;
+  popid: number;
 }

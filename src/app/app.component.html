@@ -11,15 +11,13 @@
       <p id="title">The Higher or Lower Game</p>
       <div id="homeinfo">
         <button class="btn" (click)="startGame()">Start Game</button>
-        <br>
       </div>
-      <div id="gamemodes">
-        <mat-form-field appearance="fill">
-          <mat-select [(value)]="gamemode" placeholder="Select a Gamemode">
-            <mat-option [value]="1">All Countries Pop.</mat-option>
-            <mat-option [value]="2">UN Countries Pop.</mat-option>
-          </mat-select>
-        </mat-form-field>
+      <br>
+      <div>
+        <select [(ngModel)]="gamemode" id="gamemodes">
+            <option [value]="1">All Countries Pop.</option>
+            <option [value]="2">UN Countries Pop.</option>
+        </select>
       </div>
     </div>
     <div class="fadein">
