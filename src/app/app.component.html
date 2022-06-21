@@ -37,7 +37,10 @@
   </div>
   <div *ngIf="game_started">
     <div class="scores">
-      <div class="max_score">High Score: {{max_score}}</div>
+      <div *ngIf="gamemode == 1" class="max_score">High Score: {{pop_score}}</div>
+      <div *ngIf="gamemode == 2" class="max_score">High Score: {{un_pop_score}}</div>
+      <div *ngIf="gamemode == 3" class="max_score">High Score: {{size_score}}</div>
+      <div *ngIf="gamemode == 4" class="max_score">High Score: {{un_size_score}}</div>
       <div class="current_score">Current Score: {{score}}</div>
     </div>
     <div class="country">

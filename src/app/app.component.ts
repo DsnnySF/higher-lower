@@ -251,9 +251,13 @@ export class AppComponent {
   country: Country| undefined;
   prev_country: Country| undefined;
   game_started: boolean;
+
   score: number;
-  max_score: number;
-  un_recog_max_score: number;
+  pop_score: number;
+  un_pop_score: number;
+  size_score: number;
+  un_size_score: number;
+  //true when we want to show the end screen
   end_screen: boolean;
   /*
   Gamemode 1 is all countries mode (pop)
@@ -270,8 +274,10 @@ export class AppComponent {
   constructor() {
     this.game_started = false;
     this.score = 0;
-    this.max_score = 0;
-    this.un_recog_max_score = 0;
+    this.pop_score = 0;
+    this.un_pop_score = 0;
+    this.size_score = 0;
+    this.un_size_score = 0;
     this.end_screen = false;
     this.gamemode = 1;
     this.difficulty = 2;
@@ -358,17 +364,31 @@ export class AppComponent {
 
   moveCountry(): void {
     ++this.score
-    if (this.score > this.max_score){
-      this.max_score = this.score;
+    if (this.gamemode == 1){
+      if (this.score > this.pop_score){
+        this.pop_score = this.score;
+      }
+    }
+    else if (this.gamemode == 2){
+      if (this.score > this.un_pop_score){
+        this.un_pop_score = this.score;
+      }
+    }
+    else if (this.gamemode == 3){
+      if (this.score > this.size_score){
+        this.size_score = this.score;
+      }
+    }
+    else if (this.gamemode == 4){
+      if (this.score > this.un_size_score){
+        this.un_size_score = this.score;
+      }
     }
     this.selectRandom();
 
   }
 
   endGame(): void {
-    if (this.score > this.max_score){
-      this.max_score = this.score;
-    }
     this.game_started = false;
     this.end_screen = true;
     this.score = 0;
