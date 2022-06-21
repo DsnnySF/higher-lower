@@ -288,19 +288,19 @@ export class AppComponent {
 
   //Sets this.country as a random country that is contained in the gamemode
   selectRandom(): void {
+    let num: number = this.getRandomInt(0, 234);
     if (this.gamemode == 2 || this.gamemode == 4){
-        let num: number = this.getRandomInt(0, 234);
-        while(!this.countries[num].recognizedByUN){
+        while(!this.countries[num].recognizedByUN && this.countries[num].popid != this.country?.popid){
           num = this.getRandomInt(0, 234);
         }
-        this.prev_country = this.country;
-        this.country = this.countries[num];
       }
     else {
-      let num: number = this.getRandomInt(0, 234);
-      this.prev_country = this.country;
-      this.country = this.countries[num];
+      while (this.countries[num].popid != this.country?.popid){
+        num = this.getRandomInt(0, 234);
+      }
     }
+    this.prev_country = this.country;
+    this.country = this.countries[num];
   }
 
   //returns a random int between the two given numbers
