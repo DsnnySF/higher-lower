@@ -15,8 +15,10 @@
       <br>
       <div>
         <select [(ngModel)]="gamemode" id="gamemodes">
-            <option [value]="1">All Countries Pop.</option>
-            <option [value]="2">UN Countries Pop.</option>
+          <option [value]="1">All Countries Pop.</option>
+          <option [value]="2">UN Countries Pop.</option>
+          <option [value]="3">All Countries Area</option>
+          <option [value]="4">UN Countries Area</option>
         </select>
       </div>
     </div>
@@ -74,8 +76,14 @@
           <div *ngIf="prev_country!.ratio == 1128">
             <img src="{{ prev_country.imageLink }}" alt="" class="i1128"/>
           </div>
-          <div>{{prev_country.name}} has a population of</div>
-          <div class="population">{{prev_country.pop}}</div>
+          <div *ngIf="gamemode == 1 || gamemode == 2">
+            <div>{{prev_country.name}} has a population of</div>
+            <div class="population">{{prev_country.pop}}</div>
+          </div>
+          <div *ngIf="gamemode == 3 || gamemode == 4">
+            <div>{{prev_country.name}} has a size of</div>
+            <div class="population">{{prev_country.size}} km²</div>
+          </div>
         </div>
       </div>
     </div>
@@ -116,8 +124,14 @@
             <img src="{{ country.imageLink }}" alt="" class="i1128"/>
           </div>
           <div>Does {{country.name}} have a </div>
-          <button (click)="check(true)">Higher</button> or
-          <button (click)="check(false)">Lower</button> population
+          <div *ngIf="gamemode == 1 || gamemode == 2">
+            <button (click)="check(true)">Higher</button> or
+            <button (click)="check(false)">Lower</button> population
+          </div>
+          <div *ngIf="gamemode == 3 || gamemode == 4">
+            <button (click)="check(true)">Higher</button> or
+            <button (click)="check(false)">Lower</button> total land area
+          </div>
         </div>
       </div>
     </div>

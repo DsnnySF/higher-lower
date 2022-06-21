@@ -6,4 +6,6 @@ export interface Country {
   ratio: number;
   recognizedByUN: boolean;
   popid: number;
+  size: string;
+  n_size: number;
 }
