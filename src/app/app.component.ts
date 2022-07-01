@@ -12,7 +12,7 @@ export class AppComponent {
   //info from worldometers.info
   countries: Country[] = [
     {"name": "China", "population": 1439323776, "imageLink": "assets/images/china.jpg", "pop": "1,439,323,776", "ratio": 23, "recognizedByUN" : true, "popid": 1, "size": "9,388,211", "n_size": 9388211},
-    {"name": "India", "population": 1380004385, "imageLink": "assets/images/india.svg", "pop": "1,380,004,385", "ratio": 23, "recognizedByUN" : true, "popid": 2, "size": "2,973,190", "n_size": 2973190},
+    {"name": "India", "population": 1380004385, "imageLink": "assets/images/india.png", "pop": "1,380,004,385", "ratio": 23, "recognizedByUN" : true, "popid": 2, "size": "2,973,190", "n_size": 2973190},
     {"name": "USA", "population": 331002651, "imageLink": "assets/images/usa.png", "pop": "331,002,651", "ratio": 1019, "recognizedByUN" : true, "popid": 3, "size": "9,147,420", "n_size": 9147420},
     {"name": "Indonesia", "population": 273523615, "imageLink": "assets/images/indonesia.jpg", "pop": "273,523,615", "ratio": 23, "recognizedByUN" : true, "popid": 4, "size": "1,811,570", "n_size": 1811570},
     {"name": "Pakistan", "population": 220892340, "imageLink": "assets/images/pakistan.png", "pop": "220,892,340", "ratio": 23, "recognizedByUN" : true, "popid": 5, "size": "770,880", "n_size": 770880},
@@ -149,7 +149,7 @@ export class AppComponent {
     {"name": "Mongolia", "population": 3278290, "imageLink": "assets/images/mongolia.png", "pop": "3,278,290", "ratio": 12, "recognizedByUN" : true, "popid": 136, "size": "1,553,560", "n_size": 1553560},
     {"name": "Armenia", "population": 2963243, "imageLink": "assets/images/armenia.webp", "pop": "2,963,243", "ratio": 12, "recognizedByUN" : true, "popid": 137, "size": "28,470", "n_size": 28470},
     {"name": "Jamaica", "population": 2961167, "imageLink": "assets/images/jamaica.svg", "pop": "2,961,167", "ratio": 12, "recognizedByUN" : true, "popid": 138, "size": "10,830", "n_size": 10830},
-    {"name": "Qatar", "population": 2881053, "imageLink": "assets/images/qatar.jpg", "pop": "2,881,053", "ratio": 1128, "recognizedByUN" : true, "popid": 139, "size": "11,610", "n_size": 11610},
+    {"name": "Qatar", "population": 2881053, "imageLink": "assets/images/qatar.jpg", "pop": "2,881,053", "ratio": 12, "recognizedByUN" : true, "popid": 139, "size": "11,610", "n_size": 11610},
     {"name": "Albania", "population": 2877797, "imageLink": "assets/images/albania.svg", "pop": "2,877,797", "ratio": 57, "recognizedByUN" : true, "popid": 140, "size": "27,400", "n_size": 27400},
     {"name": "Puerto Rico", "population": 2860853, "imageLink": "assets/images/puertorico.svg", "pop": "2,860,853", "ratio": 23, "recognizedByUN" : false, "popid": 141, "size": "8,870", "n_size": 8870},
     {"name": "Lithuania", "population": 2722289, "imageLink": "assets/images/lithuania.png", "pop": "2,722,289", "ratio": 35, "recognizedByUN" : true, "popid": 142, "size": "62,674", "n_size": 62674},
