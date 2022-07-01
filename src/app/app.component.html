@@ -15,10 +15,10 @@
       <br>
       <div>
         <select [(ngModel)]="gamemode" id="gamemodes">
-          <option [value]="1">All Countries Pop.</option>
-          <option [value]="2">UN Countries Pop.</option>
-          <option [value]="3">All Countries Area</option>
-          <option [value]="4">UN Countries Area</option>
+          <option [value]="1">All Countries Pop. ({{pop_score}})</option>
+          <option [value]="2">UN Countries Pop. ({{un_pop_score}})</option>
+          <option [value]="3">All Countries Area ({{size_score}})</option>
+          <option [value]="4">UN Countries Area ({{un_size_score}})</option>
         </select>
       </div>
     </div>

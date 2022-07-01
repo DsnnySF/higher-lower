@@ -286,16 +286,17 @@ export class AppComponent {
   ngOnInit(): void {
   }
 
-  //Sets this.country as a random country that is contained in the gamemode
+  //Sets this.country as a random country that is contained in the gamemode and isn't the previous country
   selectRandom(): void {
     let num: number = this.getRandomInt(0, 234);
     if (this.gamemode == 2 || this.gamemode == 4){
-        while(!this.countries[num].recognizedByUN && this.countries[num].popid != this.country?.popid){
+        //while the country is not recognized by the UN or is the same as the previous country
+        while(!this.countries[num].recognizedByUN || this.countries[num].popid == this.country?.popid){
           num = this.getRandomInt(0, 234);
         }
       }
     else {
-      while (this.countries[num].popid != this.country?.popid){
+      while (this.countries[num].popid == this.country?.popid){
         num = this.getRandomInt(0, 234);
       }
     }
