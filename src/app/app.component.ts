@@ -260,8 +260,8 @@ export class AppComponent {
   //true when we want to show the end screen
   end_screen: boolean;
   /*
-  Gamemode 1 is all countries mode (pop)
-  2 is only UN recongnized countries (pop)
+  Game mode 1 is all countries mode (pop)
+  2 is only UN recognized countries (pop)
   3 is all countries mode (size)
   4 is only UN recognized countries (size)
    */
@@ -286,7 +286,7 @@ export class AppComponent {
   ngOnInit(): void {
   }
 
-  //Sets this.country as a random country that is contained in the gamemode and isn't the previous country
+  //Sets this.country as a random country that is contained in the game mode and isn't the previous country
   selectRandom(): void {
     let num: number = this.getRandomInt(0, 234);
     if (this.gamemode == 2 || this.gamemode == 4){
